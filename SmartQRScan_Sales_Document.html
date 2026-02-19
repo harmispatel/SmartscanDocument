@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart QR Scan — Digital Menu & Ordering Solution</title>
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-dark: #0d9488;
+      --accent: #f59e0b;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #134e4a 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 0.25rem; font-size: 1.75rem; font-weight: 700; }
+    header .subtitle { opacity: 0.95; font-size: 1rem; }
+    header .meta { margin-top: 1rem; font-size: 0.9rem; opacity: 0.9; }
+    header .meta a { color: #fff; text-decoration: underline; }
+    header .logo { max-width: 180px; max-height: 80px; margin: 0 auto 1rem; display: block; }
+    section {
+      background: var(--card);
+      margin: 1.5rem 0;
+      padding: 1.75rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+    section h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; color: var(--text); }
+    p { margin: 0 0 0.75rem; }
+    ul { margin: 0.5rem 0 1rem; padding-left: 1.5rem; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--primary-dark); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td { padding: 0.6rem 0.75rem; text-align: left; border: 1px solid var(--border); }
+    th { background: var(--bg); font-weight: 600; color: var(--text); }
+    .screenshot-box {
+      margin: 1.5rem 0;
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+    .screenshot-box img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: #e2e8f0;
+    }
+    .screenshot-caption {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+    }
+    .screenshot-caption strong { color: var(--text); }
+    .demo-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; }
+    .demo-links a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--primary);
+      color: #fff !important;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .demo-links a:hover { background: var(--primary-dark); text-decoration: none; }
+    .steps-table td:first-child { font-weight: 600; width: 100px; }
+    .brands { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.75rem 0; }
+    .brands span {
+      background: var(--bg);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .contact-block {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      padding: 1.25rem;
+      border-radius: 10px;
+      margin: 1rem 0;
+      border: 1px solid #99f6e4;
+    }
+    .contact-block p { margin: 0.35rem 0; }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    @media print {
+      body { background: #fff; }
+      section { box-shadow: none; border: 1px solid #ddd; }
+      .screenshot-box { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="photos/smartqr-logo.png" alt="Smart QR Scan Logo" class="logo">
+    <h1>Smart QR Scan</h1>
+    <p class="subtitle">Digital Menu & Ordering Solution for Restaurants & Hotels</p>
+    <p class="meta">
+      <strong>Website:</strong> <a href="https://smartqrscan.com">smartqrscan.com</a> &nbsp;|&nbsp;
+      <strong>Contact:</strong> 9998212800 &nbsp;|&nbsp; harmistechnology@gmail.com
+    </p>
+  </header>
+
+  <div class="container">
+    <!-- 1. Introduction -->
+    <section>
+      <h2>1. Introduction</h2>
+      <p><strong>Smart QR Scan</strong> is a complete digital menu and ordering platform that helps restaurants and hotels serve customers through <strong>QR code–based menus</strong> and <strong>direct ordering</strong>. No more phone congestion, manual order errors, or outdated printed menus—everything runs on a modern, responsive system that works on any device.</p>
+      <p>This document explains the full software, with live demos you can try and screenshots of how it looks for your guests.</p>
+    </section>
+
+    <!-- 2. What Smart QR Scan Offers -->
+    <section>
+      <h2>2. What Smart QR Scan Offers</h2>
+      <table>
+        <tr><th>Feature</th><th>Description</th></tr>
+        <tr><td><strong>Digital QR Menu</strong></td><td>Customers scan a QR code to open your menu on their phone—no app download.</td></tr>
+        <tr><td><strong>Room Service (Hotels)</strong></td><td>One QR per room; orders go straight to kitchen/POS.</td></tr>
+        <tr><td><strong>Table Service (Restaurants)</strong></td><td>QR on each table; orders go directly to the kitchen.</td></tr>
+        <tr><td><strong>Delivery</strong></td><td>Control delivery areas and timings from your backend.</td></tr>
+        <tr><td><strong>Take-Away</strong></td><td>Built-in take-away flow for pickup orders.</td></tr>
+        <tr><td><strong>UPI/QR Payment</strong></td><td>Pay via UPI ID or QR code for quick settlement.</td></tr>
+        <tr><td><strong>Custom Theme</strong></td><td>Colors and theme match your brand.</td></tr>
+        <tr><td><strong>100% Responsive</strong></td><td>Works on mobile, tablet, and desktop.</td></tr>
+      </table>
+    </section>
+
+    <!-- 3. Live Demos -->
+    <section>
+      <h2>3. Live Demos (Try Before You Buy)</h2>
+      <p>We have two working demos so you can experience the software as your customers would.</p>
+
+      <h3>3.1 Restaurant Demo</h3>
+      <div class="demo-links">
+        <a href="https://smartqrscan.com/smartqrscandemo" target="_blank" rel="noopener">Open Restaurant Demo →</a>
+      </div>
+      <p>This demo shows a <strong>full restaurant setup</strong> with:</p>
+      <ul>
+        <li><strong>Menu categories:</strong> Cold Drinks, Desserts, Tea, Starter, Dosa, Soup, Pizza, Rice, Bhaji Pav, Indian Mains, Dal, Roti, Coffee</li>
+        <li><strong>Store opening hours</strong> — when closed, a message informs guests they cannot order until the store opens</li>
+        <li><strong>UPI/QR payment</strong> — “Pay Using UPI / QR” with QR code and “Pay Now” for confirming orders</li>
+        <li><strong>Clean, category-based layout</strong> so guests can browse and order easily</li>
+      </ul>
+      <p><em>Use case:</em> Cafes, bars, bistros, restaurants, taverns, beach bars, food courts.</p>
+
+      <div class="screenshot-box">
+        <img src="photos/restaurant-demo-1.png" alt="Restaurant Demo — Main menu categories grid">
+        <p class="screenshot-caption"><strong>Restaurant Demo — Main menu:</strong> Food categories grid (Cold Drinks, Desserts, Tea, Starter, Dosa, Soup, Pizza, Rice, Bhaji Pav, Indian Mains, Dal, Roti, Coffee) with images and “Pay Now” in the header.</p>
+      </div>
+
+      <div class="screenshot-box">
+        <img src="photos/restaurant-demo-2.png" alt="Restaurant Demo — Category view with items">
+        <p class="screenshot-caption"><strong>Restaurant Demo — Category view:</strong> Selecting a category (e.g. Tea) shows items with images, size, price, and add-to-cart. Example: Masala chai, Ginger Tea, Pudina tea with “Day Special” and ratings.</p>
+      </div>
+
+      <div class="screenshot-box">
+        <img src="photos/restaurant-demo-3.png" alt="Restaurant Demo — Item detail and add to cart">
+        <p class="screenshot-caption"><strong>Restaurant Demo — Item detail &amp; review:</strong> Clicking an item opens a popup with image, price, quantity selector, “Add It” button, and review section (stars, email, comment, Submit).</p>
+      </div>
+
+      <h3>3.2 Hotel Demo</h3>
+      <div class="demo-links">
+        <a href="https://smartqrscan.com/demo-hotel" target="_blank" rel="noopener">Open Hotel Demo →</a>
+      </div>
+      <p>This demo shows a <strong>hotel setup</strong> with:</p>
+      <ul>
+        <li><strong>Multi-language support</strong> (e.g. English, Arabic)</li>
+        <li><strong>Hotel-specific sections:</strong> Welcome, About Us, Restaurants, Banquet, Room Service, Our Gallery, Pool, Check In Page, Packages, Restaurant Menu</li>
+        <li><strong>Room service–ready</strong> — same UPI/QR payment and ordering flow as the restaurant demo</li>
+        <li><strong>Store hours</strong> — same “store closed” logic when outside operating time</li>
+      </ul>
+      <p><em>Use case:</em> Hotels, resorts, and any property offering room service, F&B, banquets, and packages.</p>
+
+      <div class="screenshot-box">
+        <img src="photos/hotel-demo-1.png" alt="Hotel Demo — Main homepage with services grid">
+        <p class="screenshot-caption"><strong>Hotel Demo — Main homepage:</strong> DEMO Hotel DESERT &amp; SPA landing with grid of services — Welcome, About US, Restaurants, Banquet, Room Service, Our Gallery, Pool, Check In Page, Packages, Restaurant Menu. Language selector and search in header.</p>
+      </div>
+
+      <div class="screenshot-box">
+        <img src="photos/hotel-demo-2.png" alt="Hotel Demo — Our Gallery">
+        <p class="screenshot-caption"><strong>Hotel Demo — Our Gallery:</strong> Grid of hotel images — building, lobby, rooms, food, pool, amenities — for a professional showcase of your property.</p>
+      </div>
+
+      <div class="screenshot-box">
+        <img src="photos/hotel-demo-3.png" alt="Hotel Demo — Check In Page">
+        <p class="screenshot-caption"><strong>Hotel Demo — Check In Page:</strong> Guest check-in form with First Name, Last Name, Email, Phone, Passport No., Room No., Nationality, Date of Birth, Arrival/Departure dates, and Message. Streamlined digital check-in.</p>
+      </div>
+    </section>
+
+    <!-- 4. How It Works -->
+    <section>
+      <h2>4. How It Works (3 Simple Steps)</h2>
+      <table class="steps-table">
+        <tr><th>Step</th><th>What You Do</th><th>What You Get</th></tr>
+        <tr><td><strong>Step 01</strong></td><td>Send your <strong>logo</strong> (PNG, JPEG, PSD, CI, or PDF — large size, clear)</td><td>Logo used on your digital menu and branding</td></tr>
+        <tr><td><strong>Step 02</strong></td><td>Send your <strong>current menu or catalog</strong> (PDF, Document, or JPEG)</td><td>We build your digital menu with categories and items</td></tr>
+        <tr><td><strong>Step 03</strong></td><td><strong>Download your QR code</strong> — print and place on tables/rooms</td><td>Guests scan and order; you manage everything from one place</td></tr>
+      </table>
+      <p>No complex setup—you provide branding and menu, we deliver a ready-to-use QR and link.</p>
+    </section>
+
+    <!-- 5. Why Choose Smart QR Scan -->
+    <section>
+      <h2>5. Why Choose Smart QR Scan?</h2>
+      <h3>For Hotels</h3>
+      <ul>
+        <li><strong>Less phone congestion</strong> — guests order via QR instead of calling reception.</li>
+        <li><strong>Fewer errors</strong> — orders go directly to kitchen/POS, no manual writing or mishearing.</li>
+        <li><strong>One QR per room</strong> — simple for guests and easy for you to manage.</li>
+        <li><strong>Room service + restaurant + banquet</strong> — one system for F&B and events.</li>
+      </ul>
+      <h3>For Restaurants</h3>
+      <ul>
+        <li><strong>Table service</strong> — QR on each table; orders go straight to the kitchen.</li>
+        <li><strong>Delivery</strong> — define delivery areas and timings in the backend.</li>
+        <li><strong>Take-away</strong> — support pickup orders in the same system.</li>
+        <li><strong>Always up-to-date</strong> — change menu and prices without reprinting.</li>
+      </ul>
+      <h3>For Both</h3>
+      <ul>
+        <li><strong>Custom theme</strong> — colors and look match your brand.</li>
+        <li><strong>Fully responsive</strong> — works on all devices.</li>
+        <li><strong>Visitor statistics</strong> — see how many people view your menu.</li>
+        <li><strong>Instant updates</strong> — add/remove categories and products, change prices, activate/deactivate items by availability.</li>
+        <li><strong>Photos</strong> — add images to categories and products for a richer menu.</li>
+      </ul>
+    </section>
+
+    <!-- 6. Featured Capabilities -->
+    <section>
+      <h2>6. Featured Capabilities (Backend & Menu)</h2>
+      <ul>
+        <li><strong>Instant price changes</strong> — update prices anytime.</li>
+        <li><strong>Add new categories and products</strong> — expand your offer without extra print.</li>
+        <li><strong>Activate/deactivate products</strong> — e.g. “sold out” or seasonal items.</li>
+        <li><strong>Add photos</strong> in categories and for products.</li>
+        <li><strong>Display menu visitor statistics</strong> — understand engagement.</li>
+        <li><strong>Change menu colors</strong> — keep branding consistent.</li>
+        <li><strong>Responsive design</strong> — same experience on phone, tablet, and desktop.</li>
+      </ul>
+    </section>
+
+    <!-- 7. Where Smart QR Scan Fits -->
+    <section>
+      <h2>7. Where Smart QR Scan Fits</h2>
+      <table>
+        <tr><th>Business Type</th><th>Best For</th></tr>
+        <tr><td><strong>Restaurants</strong></td><td>Table service, online delivery, take-away—all in one.</td></tr>
+        <tr><td><strong>Hotels</strong></td><td>Room service, restaurant, banquet, and package offerings.</td></tr>
+        <tr><td><strong>Cafes, Bars, Bistros</strong></td><td>Quick, modern ordering without paper menus.</td></tr>
+        <tr><td><strong>Taverns, Beach Bars, Playgrounds</strong></td><td>Durable digital menu that’s easy to update.</td></tr>
+      </table>
+    </section>
+
+    <!-- 8. Trust & Social Proof -->
+    <section>
+      <h2>8. Trust & Social Proof</h2>
+      <p>Smart QR Scan is already used by businesses such as:</p>
+      <div class="brands">
+        <span>Dosti Syrup</span>
+        <span>H2G</span>
+        <span>Mountview</span>
+        <span>Veranda - A Rooftop Restro & Cafe</span>
+        <span>Shambhus CoffeeBar</span>
+        <span>Comfy the Restaurant</span>
+        <span>Cafe De Italiano</span>
+        <span>The Rustik Cafe & Restro</span>
+      </div>
+    </section>
+
+    <!-- 9. Next Steps & Contact -->
+    <section>
+      <h2>9. Next Steps & Contact</h2>
+      <ol>
+        <li><strong>Try the demos</strong><br>
+          Restaurant: <a href="https://smartqrscan.com/smartqrscandemo">smartqrscan.com/smartqrscandemo</a><br>
+          Hotel: <a href="https://smartqrscan.com/demo-hotel">smartqrscan.com/demo-hotel</a>
+        </li>
+        <li><strong>Visit the main site</strong><br>
+          <a href="https://smartqrscan.com">smartqrscan.com</a> — see full features and “Get Started”.
+        </li>
+        <li><strong>Get in touch</strong></li>
+      </ol>
+      <div class="contact-block">
+        <p><strong>Phone:</strong> 9998212800</p>
+        <p><strong>Email:</strong> harmistechnology@gmail.com</p>
+        <p><strong>Address:</strong> 1201 Krupal Pathashaal, Nr. Pintoo Apparels, Shivranjani Cross Road 132Ft. Ring Road, Satellite Rd, opp. HP Petrol Pump, Ahmedabad, Gujarat 380015</p>
+      </div>
+      <p>We’ll help you with logo, menu upload, and QR setup so you can go live quickly.</p>
+    </section>
+
+    <!-- 10. Summary -->
+    <section>
+      <h2>10. Summary</h2>
+      <p>Smart QR Scan is a <strong>single platform</strong> for:</p>
+      <ul>
+        <li><strong>Digital QR menus</strong> for restaurants and hotels</li>
+        <li><strong>Room service, table service, delivery, and take-away</strong></li>
+        <li><strong>UPI/QR payments</strong> and <strong>custom themes</strong></li>
+        <li><strong>Instant menu updates, photos, and visitor stats</strong></li>
+        <li><strong>Fully responsive</strong> experience for your guests</li>
+      </ul>
+      <p>Replace the placeholder screenshots above with real screenshots from the demo links to make this document a complete, client-ready sales overview.</p>
+    </section>
+
+    <footer>
+      © Smart QR Scan. All rights reserved. Document prepared for client presentation.
+    </footer>
+  </div>
+</body>
+</html>
